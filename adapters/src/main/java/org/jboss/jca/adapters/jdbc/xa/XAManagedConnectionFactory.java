@@ -171,7 +171,7 @@ public class XAManagedConnectionFactory extends BaseWrapperManagedConnectionFact
          // Map any \ to \\
          xaDataSourceProperties = xaDataSourceProperties.replaceAll("\\\\", "\\\\\\\\");
          // Map any ; to \n
-         xaDataSourceProperties = xaDataSourceProperties.replace(';', '\n');
+//         xaDataSourceProperties = xaDataSourceProperties.replace(';', '\n');
 
          InputStream is = new ByteArrayInputStream(xaDataSourceProperties.getBytes());
          try
