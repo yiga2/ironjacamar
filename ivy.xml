@@ -144,7 +144,7 @@
     <dependency org="org.hornetq" name="hornetq-jms-client" rev="${version.hornetq}" conf="hornetq"/>
     <dependency org="org.hornetq" name="hornetq-ra" rev="${version.hornetq}" conf="hornetq">
       <artifact name="hornetq-ra" type="jar" conf="hornetq"/>
-      <artifact name="hornetq-ra" type="rar" conf="hornetq"/>
+      <!--<artifact name="hornetq-ra" type="rar" conf="hornetq"/>-->
     </dependency>
     <dependency org="org.javassist" name="javassist" rev="${version.javassist}" conf="common,ironjacamar-depchain"/>
     <dependency org="org.jboss" name="jboss-common-core" rev="${version.jboss.common}" conf="common,ironjacamar-depchain"/>
