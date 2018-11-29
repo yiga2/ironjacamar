@@ -170,8 +170,9 @@ public class XAManagedConnectionFactory extends BaseWrapperManagedConnectionFact
       {
          // Map any \ to \\
          xaDataSourceProperties = xaDataSourceProperties.replaceAll("\\\\", "\\\\\\\\");
-         // Map any ; to \n
-//         xaDataSourceProperties = xaDataSourceProperties.replace(';', '\n');
+         
+         // Map ; to \n only for properties having a setter in the jdbc xa driver class
+        xaDataSourceProperties = xaDataSourceProperties.replaceAll("(?i);(user|password|url)", "\n$1");
 
          InputStream is = new ByteArrayInputStream(xaDataSourceProperties.getBytes());
          try
