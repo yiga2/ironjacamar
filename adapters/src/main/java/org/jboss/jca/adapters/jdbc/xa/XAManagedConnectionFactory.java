@@ -174,7 +174,7 @@ public class XAManagedConnectionFactory extends BaseWrapperManagedConnectionFact
          xaDataSourceProperties = xaDataSourceProperties.replaceAll("\\\\", "\\\\\\\\");
          
          // Map ; to \n only for properties having a setter in the jdbc xa driver class
-        xaDataSourceProperties = xaDataSourceProperties.replaceAll("(?i);(user|password|url)", "\n$1");
+        xaDataSourceProperties = xaDataSourceProperties.replaceAll("(?i);(user|password|url|$)", "\n$1");
 
          this.log.info("properties after replace ===> " + xaDataSourceProperties);
 
